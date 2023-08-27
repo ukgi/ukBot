@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 24px;
+  --main-color: #7357e7;
+  --white-color: #ffff;
+  --chatbot-dialog: #e0e0e0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatbot {
+  background-color: var(--white-color);
+  width: 28rem;
+  height: 29rem;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.dialog-list::-webkit-scrollbar {
+  display: none;
+}
+
+.dialog-list {
+  padding: 0.5rem 0.8rem;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.dialog {
+  width: 100%;
+}
+
+.chatbot-dialog {
+  margin: 0;
+  width: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.user-dialog {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  width: 30%;
+  margin-left: 18rem;
+  border-radius: 1rem;
+}
+
+.chatbot-dialog > p,
+.user-dialog > p {
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+}
+
+.chatbot-dialog > p {
+  border-radius: 1rem;
+  flex-grow: 0.8;
+  background-color: var(--chatbot-dialog);
+}
+
+.user-dialog > p {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid var(--chatbot-dialog);
+}
+
+footer > form {
+  display: flex;
+  transform: translateY(50%);
+}
+
+footer > form > input {
+  width: 80%;
+  outline: none;
+  border: none;
+}
+
+button[type='submit'] {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+button[type='submit'] > i:hover {
+  color: var(--main-color);
+}
